@@ -1,0 +1,14 @@
+from keras.models import Sequential
+from keras.layers import Dense
+
+# Example of training a simple model (replace with your actual model)
+model = Sequential()
+model.add(Dense(64, input_dim=3, activation='relu'))  # Adjust the input_dim according to your features
+model.add(Dense(1, activation='sigmoid'))  # Binary output (cancer or no cancer)
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+# Train your model here (this is just an example)
+# model.fit(X_train, y_train)
+
+# Save the trained model
+model.save('model.h5')
